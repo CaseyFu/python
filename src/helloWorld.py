@@ -4,12 +4,7 @@ from xfk import invoke
 
 num = random.random()
 
-
-# def test(num):
-#     print(__name__)
-#     print(num)
-
-
 if __name__ == "__main__":
+    print("随机数:", num)
     ok.test()
     invoke.test()
