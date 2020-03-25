@@ -1,7 +1,1 @@
-{
-    "code-runner.executorMap": {
-        "python": "python"
-    },
-    "python.pythonPath": "D:\\Anaconda\\python.exe",
-    "code-runner.runInTerminal": false, // 不在终端中运行
-}
+{}
