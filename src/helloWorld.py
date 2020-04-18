@@ -1,7 +1,9 @@
 import random
 import keyword
 import sys
+import os
 import math
+import zlib
 # 导入整个模块
 import arithmetic.fibonacci as FIB
 # 导入一个模块的部分函数
@@ -215,7 +217,8 @@ def w():
     """格式化输出"""
     s = "xfk"
     a = 1.23
-    print("my name is {0} and the fraction is {1}.".format(s, a))
+    print("十进制:{3:d} 二进制:{0:b} 八进制:{1:o} 十六进制:{2:x}".format(15, 15, 15, 15))
+    print("my name is {0} and the fraction is {1:.3f}.".format(s, a))
     print("my name is %s and the fraction is %.2f." % (s, a))
 
 
@@ -247,21 +250,98 @@ def y():
 
 
 def z():
-    l = []
-    sum, counter = 0, 0
-    while(counter < 10):
-        num = eval(input("输入第"+str(counter+1)+"个整数:"))
-        if(num & 1 == 1):
-            l.append(num)
-            sum += num
-            counter += 1
-        else:
-            print("输入的不是奇数, 请继续输入")
-    print(l)
-    print("总和:", sum, "平均值:", sum/10)
+    name = "I LOVE YOU"
+    for x in range(0, len(name)):
+        c = name[x]
+        c = c.upper()
+        if (c == "A"):
+            print("..######..\n..#....#..\n..######..", end=" ")
+            print("\n..#....#..\n..#....#..\n\n")
+        elif (c == "B"):
+            print("..######..\n..#....#..\n..#####...", end=" ")
+            print("\n..#....#..\n..######..\n\n")
+        elif (c == "C"):
+            print("..######..\n..#.......\n..#.......", end=" ")
+            print("\n..#.......\n..######..\n\n")
+        elif (c == "D"):
+            print("..#####...\n..#....#..\n..#....#..", end=" ")
+            print("\n..#....#..\n..#####...\n\n")
+        elif (c == "E"):
+            print("..######..\n..#.......\n..#####...", end=" ")
+            print("\n..#.......\n..######..\n\n")
+        elif (c == "F"):
+            print("..######..\n..#.......\n..#####...", end=" ")
+            print("\n..#.......\n..#.......\n\n")
+        elif (c == "G"):
+            print("..######..\n..#.......\n..#.####..", end=" ")
+            print("\n..#....#..\n..#####...\n\n")
+        elif (c == "H"):
+            print("..#....#..\n..#....#..\n..######..", end=" ")
+            print("\n..#....#..\n..#....#..\n\n")
+        elif (c == "I"):
+            print("..######..\n....##....\n....##....", end=" ")
+            print("\n....##....\n..######..\n\n")
+        elif (c == "J"):
+            print("..######..\n....##....\n....##....", end=" ")
+            print("\n..#.##....\n..####....\n\n")
+        elif (c == "K"):
+            print("..#...#...\n..#..#....\n..##......", end=" ")
+            print("\n..#..#....\n..#...#...\n\n")
+        elif (c == "L"):
+            print("..#.......\n..#.......\n..#.......", end=" ")
+            print("\n..#.......\n..######..\n\n")
+        elif (c == "M"):
+            print("..#....#..\n..##..##..\n..#.##.#..", end=" ")
+            print("\n..#....#..\n..#....#..\n\n")
+        elif (c == "N"):
+            print("..#....#..\n..##...#..\n..#.#..#..", end=" ")
+            print("\n..#..#.#..\n..#...##..\n\n")
+        elif (c == "O"):
+            print("..######..\n..#....#..\n..#....#..", end=" ")
+            print("\n..#....#..\n..######..\n\n")
+        elif (c == "P"):
+            print("..######..\n..#....#..\n..######..", end=" ")
+            print("\n..#.......\n..#.......\n\n")
+        elif (c == "Q"):
+            print("..######..\n..#....#..\n..#.#..#..", end=" ")
+            print("\n..#..#.#..\n..######..\n\n")
+        elif (c == "R"):
+            print("..######..\n..#....#..\n..#.##...", end=" ")
+            print("\n..#...#...\n..#....#..\n\n")
+        elif (c == "S"):
+            print("..######..\n..#.......\n..######..", end=" ")
+            print("\n.......#..\n..######..\n\n")
+        elif (c == "T"):
+            print("..######..\n....##....\n....##....", end=" ")
+            print("\n....##....\n....##....\n\n")
+        elif (c == "U"):
+            print("..#....#..\n..#....#..\n..#....#..", end=" ")
+            print("\n..#....#..\n..######..\n\n")
+        elif (c == "V"):
+            print("..#....#..\n..#....#..\n..#....#..", end=" ")
+            print("\n...#..#...\n....##....\n\n")
+        elif (c == "W"):
+            print("..#....#..\n..#....#..\n..#.##.#..", end=" ")
+            print("\n..##..##..\n..#....#..\n\n")
+        elif (c == "X"):
+            print("..#....#..\n...#..#...\n....##....", end=" ")
+            print("\n...#..#...\n..#....#..\n\n")
+        elif (c == "Y"):
+            print("..#....#..\n...#..#...\n....##....", end=" ")
+            print("\n....##....\n....##....\n\n")
+        elif (c == "Z"):
+            print("..######..\n......#...\n.....#....", end=" ")
+            print("\n....#.....\n..######..\n\n")
+        elif (c == " "):
+            print("..........\n..........\n..........", end=" ")
+            print("\n..........\n\n")
+        elif (c == "."):
+            print("----..----\n\n")
 
 
-if(__name__ == "__main__"):
-    o()
-else:
-    print("我被调用")
+def aa():
+    """filter"""
+    l = [1, 2, 3, 4, 5, 6, 7, 12, 5, 24]
+    l2 = list(filter(lambda i: i > 10, range(1, 12)))
+    print(l2)
+

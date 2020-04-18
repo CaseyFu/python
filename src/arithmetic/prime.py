@@ -1,4 +1,12 @@
 import math
+"""
+round()四舍五入
+ceil()向上取整
+floor()向下取整
+int()向下取整
+素数,质数,prime,指的是:数n不能被[2,n-1]之间数整除
+for(int i=2; i<=floor(sqrt(n)); i++)
+"""
 
 
 def prime(n):
@@ -14,8 +22,9 @@ def prime(n):
             print(i, end=" ")
 
 
-def prime(val):
+def prime():
     """判断素数、质数"""
+    val = eval(input("输入一个数:"))
     i = 2
     while(i <= math.sqrt(val)):
         if(val % i == 0):
@@ -27,7 +36,4 @@ def prime(val):
     print("%d不是素数" % (val))
 
 
-if(__name__ == "__main__"):
-    prime(8)
-else:
-    print("素数")
+prime()

@@ -1,3 +1,4 @@
-if(j >= round(math.sqrt(i))):
-        #     # 素数
-        #     print(i)
+import random
+
+n = random.randint(0, 9)
+print(n)

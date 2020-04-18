@@ -14,16 +14,7 @@ def fibA(n):
 
 
 def fibB(n):
-    # 打印第1到第n的斐波拉契数列[1,n]
-    x, y = 0, 1
-    for i in range(0, n, 1):
-        x = x+y
-        print(x, end="\t")
-        y = x-y
-
-
-def fibC(n):
-    # 返回一个第1到第n的斐波拉契数列列表[1,n]
+    """返回一个第1到第n的斐波拉契数列列表[1,n]"""
     arr = [0]*n
     arr[0], arr[1] = 1, 1
     for i in range(2, n, 1):
@@ -31,15 +22,10 @@ def fibC(n):
     return arr
 
 
-def fibD(n):
-    # 返回一个第1到第n的斐波拉契数列列表[1,n]
-    arr = []
-    x, y = 0, 1
-    for i in range(0, n, 1):
-        arr.append(y)
-        x, y = y, x+y
-    return arr
+def fibC(n):
+    if(n == 1 or n == 2):
+        return 1
+    return fibC(n-1) + fibC(n-2)
 
 
-if(__name__ == "__main__"):
-    print("本程序中运行")
+print(list(fibC(i)for i in range(1, 21)))
