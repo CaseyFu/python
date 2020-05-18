@@ -1,5 +1,11 @@
-*.pyc
-src/GUI/barcode/dist/
-*.lnk
-.idea
-.vscode
+**/*.pyc
+**/src/GUI/barcode/dist/
+**/*.lnk
+**/.idea
+**/.vscode
+**/*.qrc
+**/*.xls
+**/*.ui
+**/*.spec
+**/img
+**/*.pkl
