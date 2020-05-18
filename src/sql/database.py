@@ -1,13 +1,16 @@
 import mysql.connector
 import pickle
 import os
+
+
 db = mysql.connector.connect(
     host="localhost",
     user="xfk",
     passwd="38524",
 )
-database = "pythonDB1"  # 要操作的数据库, 谨防被覆盖
 dbObj = db.cursor()  # 获取游标
+
+database = "pythonDB1"  # 要操作的数据库, 谨防被覆盖
 
 
 def useDatabase(database):
@@ -249,10 +252,10 @@ line()
 i = 1
 while(i != 0):
     print("1. 在学生表中新增一条记录")
-    print("2. 更新成绩")
+    print("2. 更新学生成绩")
     print("3. 删除学生记录")
-    print("4. 查询某课程中优秀学生名单")
-    print("5. 保存数据(student表数据-->student.pkl, ...)")
+    print("4. 查询某课程中优秀(分数>=90)学生名单")
+    print("5. 保存数据到pkl文件")
     print("6. 删除数据库")
     print("7. 查询表")
     print("8. 根据学号查找学生信息")

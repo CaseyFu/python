@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1090</width>
+    <height>615</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="importBtn">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>97</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>导入</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exportBtn">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>10</y>
+      <width>97</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>导出</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="fileList">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>1051</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <row>
+     <property name="text">
+      <string>第一行</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>第二行</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>第三行</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>文件名</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>大小</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>位置</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>创建日期</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>修改日期</string>
+     </property>
+    </column>
+    <item row="0" column="0">
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item row="0" column="1">
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item row="0" column="2">
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item row="0" column="3">
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item row="0" column="4">
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item row="1" column="0">
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item row="1" column="1">
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item row="1" column="2">
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item row="1" column="3">
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item row="1" column="4">
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item row="2" column="0">
+     <property name="text">
+      <string>3</string>
+     </property>
+    </item>
+    <item row="2" column="1">
+     <property name="text">
+      <string>3</string>
+     </property>
+    </item>
+    <item row="2" column="2">
+     <property name="text">
+      <string>3</string>
+     </property>
+    </item>
+    <item row="2" column="3">
+     <property name="text">
+      <string>3</string>
+     </property>
+    </item>
+    <item row="2" column="4">
+     <property name="text">
+      <string>3</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>250</y>
+      <width>72</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>文件数:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="totalFileNum">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>250</y>
+      <width>72</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="resultList">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>310</y>
+      <width>1051</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <row>
+     <property name="text">
+      <string>第一行</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>第二行</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>文件名</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>状态</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>格式</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>值</string>
+     </property>
+    </column>
+    <item row="0" column="0">
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item row="0" column="1">
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item row="0" column="2">
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item row="0" column="3">
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item row="1" column="0">
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item row="1" column="1">
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item row="1" column="2">
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item row="1" column="3">
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>290</y>
+      <width>72</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>结果:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="scanBtn">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>260</y>
+      <width>97</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>扫描</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>520</y>
+      <width>72</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>扫描成功:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="successScanNum">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>520</y>
+      <width>72</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>520</y>
+      <width>72</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>扫描失败:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="failScanNum">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>520</y>
+      <width>72</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exitBtn">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>520</y>
+      <width>97</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>退出</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1090</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

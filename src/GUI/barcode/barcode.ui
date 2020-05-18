@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1268</width>
+    <height>711</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>条形码扫描王</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>C:/Users/Administrator/.designer/backup/favicon.png</normaloff>C:/Users/Administrator/.designer/backup/favicon.png</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>0.960000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background:white;
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="scanBtn">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>340</y>
+      <width>97</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:#41B883;
+color:white;
+font-family:黑体;
+</string>
+    </property>
+    <property name="text">
+     <string>开始扫描</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exitBtn">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>670</y>
+      <width>97</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:#F76260;
+color:white;
+font-family:黑体;</string>
+    </property>
+    <property name="text">
+     <string>退出程序</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exportBtn">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>20</y>
+      <width>97</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:#41B883;
+color:white;
+font-family:黑体;
+</string>
+    </property>
+    <property name="text">
+     <string>导出数据</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="importBtn">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>97</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:#41B883;
+color:white;
+font-family:黑体;
+</string>
+    </property>
+    <property name="text">
+     <string>导入条形码</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>320</y>
+      <width>70</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family:黑体;
+font-size:20px;</string>
+    </property>
+    <property name="text">
+     <string>文件数:</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="fileList">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>1231</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">opcity:0.9;</string>
+    </property>
+    <column>
+     <property name="text">
+      <string>文件名</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>大小</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>位置</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>创建日期</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>最近修改日期</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>360</y>
+      <width>50</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family:黑体;
+font-size:20px;</string>
+    </property>
+    <property name="text">
+     <string>结果:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>670</y>
+      <width>90</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family:黑体;
+font-size:20px;</string>
+    </property>
+    <property name="text">
+     <string>成功扫描:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>670</y>
+      <width>90</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family:黑体;
+font-size:20px;</string>
+    </property>
+    <property name="text">
+     <string>失败扫描:</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="resultList">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>391</y>
+      <width>1231</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>文件名</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>状态</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>格式</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>值</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="totalFile">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>320</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family:黑体;
+font-size:20px;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="successScan">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>670</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family:黑体;
+font-size:20px;
+color:green;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="failScan">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>670</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family:黑体;
+font-size:20px;
+color:red;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="prompt">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>330</y>
+      <width>555</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family:黑体;
+font-size:30px;
+color:#41B883;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>30</y>
+      <width>360</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family:黑体;
+font-size:20px;</string>
+    </property>
+    <property name="text">
+     <string>(导出前确保data.xls目前处于关闭状态)</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

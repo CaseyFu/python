@@ -1,1 +1,3 @@
 *.pyc
+/src/GUI/barcode/dist
+*.lnk

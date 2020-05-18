@@ -1,4 +1,4 @@
 {
     "python.pythonPath": "D:\\Anaconda\\python.exe",
-    "code-runner.runInTerminal": true, // 在终端中运行
+    "code-runner.runInTerminal": false, // 在终端中运行
 }

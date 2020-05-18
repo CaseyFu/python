@@ -6,7 +6,7 @@ BM字符串匹配算法
 
 
 def searchBadInPattern(pattern, c, i):
-    """[i-->0)返回字符c在pattern中的位置, c不存在返回-1"""
+    """[i-1-->0)返回字符c在pattern中的位置, c不存在返回-1"""
     # [0, i-1]会产生死循环
     for j in range(i-1, -1, -1):
         if(pattern[j] == c):
@@ -25,7 +25,7 @@ def bmBad(string, pattern):
         if(i < 0):
             # 没有找到坏字符, 匹配成功
             return start
-        # 寻找坏字符再模式串中的位置
+        # 寻找坏字符在模式串中的位置
         badIndex = searchBadInPattern(pattern, string[start+i], i)
         start += i+1 if badIndex == -1 else i-badIndex
     return -1
@@ -39,7 +39,7 @@ print(bmBad(s, pattern))
 # dadc
 # 2.
 # adsdabcsdfer
-#         dadc
+#  dadc
 # 3.
 # adsdabcsdfer
 #     abc
