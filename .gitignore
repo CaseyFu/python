@@ -9,3 +9,6 @@
 **/*.spec
 **/img
 **/*.pkl
+build/
+dist/
+ZBar/
