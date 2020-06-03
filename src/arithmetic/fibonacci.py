@@ -28,4 +28,3 @@ def fibC(n):
     return fibC(n-1) + fibC(n-2)
 
 
-print(list(fibC(i)for i in range(1, 21)))

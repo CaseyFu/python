@@ -4,20 +4,22 @@ import sys
 import os
 import math
 import zlib
+import re
 # 导入整个模块
 import arithmetic.fibonacci as FIB
 # 导入一个模块的部分函数
-# from arithmetic.fibonacci import fibA
+from arithmetic.fibonacci import fibA
 # 导入其它包的类
 from xfk.myIterator import TestClass
 import exception.error as error
+
 # python练习手册
-sys.path.append('./')
+# sys.path.append('./')
 
 
 def a():
     # 二维数组
-    list = [[]for i in range(0, 3, 1)]
+    list = [[] for i in range(0, 3, 1)]
     list[0] = [1, 2, 3, 4, 5]
     list[1] = [1, 2, 3]
     list[2] = [1, 2, 3, 4]
@@ -47,7 +49,7 @@ def c():
 def d():
     # pass什么都不做, 占位
     i = 10
-    if(i > 5):
+    if (i > 5):
         pass
     print(sys.platform)
 
@@ -62,9 +64,9 @@ def f(num, **kw):
     # 关键字参数**kw, 除了num之外传入任意键值对, 自动组装成dict, f(1, city="chongqing", prince="key")
     # 接收一个dict
     print(num, kw)
-    if("city" in kw):
+    if ("city" in kw):
         print("有城市")
-    if("princess" not in kw):
+    if ("princess" not in kw):
         print("没有princess")
 
 
@@ -85,14 +87,14 @@ def i():
     num = 1
     for i in keyword.kwlist:
         print(i, end="  ")
-        if(num % 7 == 0):
+        if (num % 7 == 0):
             print()
         num += 1
 
 
 def j():
     # 求幂
-    print(2**4)
+    print(2 ** 4)
 
 
 def k():
@@ -143,23 +145,23 @@ def o():
 def p():
     """repr、rjust"""
     for i in range(1, 11, 1):
-        print(repr(i).rjust(0), repr(i*i).center(1), repr(i*i*i).rjust(2))
+        print(repr(i).rjust(0), repr(i * i).center(1), repr(i * i * i).rjust(2))
 
     for i in range(1, 11, 1):
-        print("{0:2d} {1:3d} {2:4d}".format(i, i*i, i*i*i))
+        print("{0:2d} {1:3d} {2:4d}".format(i, i * i, i * i * i))
 
 
 def q():
     n = 1
-    while(r(n) < 1000):
+    while (r(n) < 1000):
         n += 1
-    print("不超过1000的最大n值为:", n-1)
+    print("不超过1000的最大n值为:", n - 1)
 
 
 def r(n):
     num = 0
-    for i in range(1, n+1, 1):
-        num += i**2
+    for i in range(1, n + 1, 1):
+        num += i ** 2
     return num
 
 
@@ -173,9 +175,9 @@ def s():
 def t(n):
     """yield存储当前变量,返回一个迭代器执行next()的时候+1"""
     a, b, counter = 0, 1, 0
-    while(counter <= n):
+    while (counter <= n):
         yield a
-        a, b = b, a+b
+        a, b = b, a + b
         counter += 1
 
 
@@ -226,7 +228,7 @@ def x():
     """异常"""
     i, j = 1, 0
     try:
-        i = i/j
+        i = i / j
     except Exception as e:
         print(e)
     else:
@@ -234,11 +236,11 @@ def x():
     finally:
         print("end")
     s = "i just want to fock you sh0t good"
-    if(s.find("fuck") != -1):
+    if (s.find("fuck") != -1):
         raise error.DirtyError("your words including f**k")
-    if(s.find("shit") != -1):
+    if (s.find("shit") != -1):
         raise error.DirtyError("your words including s**t")
-    if(s.find("good") != -1):
+    if (s.find("good") != -1):
         raise error.MoralError("excellent")
 
 
@@ -345,3 +347,22 @@ def aa():
     l2 = list(filter(lambda i: i > 10, range(1, 12)))
     print(l2)
 
+
+def ab():
+    """正则表达式获取文件名、文件后缀"""
+    fileName = "\\11.xfk\\xfk.min.txt"
+    pattern = re.compile(r'.*[/\\](.+)\.(.+)$')
+    matcher = pattern.match(fileName)
+    if(matcher):
+        print(matcher.group(2))
+    else:
+        print("匹配不成功")
+
+
+def ac():
+    path = "./xfkc"  # 如果目录不存在就返回False
+    if(not os.path.exists(path)):
+        os.makedirs(path)
+
+if __name__ == "__main__":
+    ac()

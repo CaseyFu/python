@@ -1,11 +1,13 @@
 import pickle
 import os
 import sys
+from shutil import copyfile
 
 
 def writeOrdinary():
     """写文件"""
     with open("f:/test.txt", "w", 1024, "UTF-8") as f:
+        
         f.write("写一写东西\n第二行")
 
 
@@ -41,7 +43,13 @@ def t():
         print(s)
 
 
+def copyFile():
+    """复制文件"""
+    try:
+        copyfile('./xfk1.txt', '../test.txt')
+    except FileNotFoundError:
+        print("文件未找到")
+
 # pickleSerialize()
 # pickleDeserialize()
-input("输入学号")
-input("输入学号")
+copyFile()

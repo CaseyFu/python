@@ -1,16 +1,20 @@
 from PyQt5 import QtCore, QtGui
+from shutil import copyfile
 import barcode
 import sys
 import time
 import xlwt
 import os
+import re
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QMessageBox, QTableWidgetItem
+
 # 文件集合, 确保元素不重复
 fileSet = set()
 
 
 # method
 def importEvent(mw, ui):
+    """导入图片"""
     ui.prompt.setText("")
     files = QFileDialog.getOpenFileNames(mw, '打开文件', './', ("Images (*.png *.jpg *.bmp *.gif *.raw *.tif *.xpm)"))
     for i in files[0]:
@@ -50,6 +54,7 @@ def timeToStrTime(timestamp):
 
 
 def startScan(mw, ui):
+    """扫描图片"""
     if len(fileSet) == 0:
         QMessageBox.information(mw, '提示', '你没有选择任何条形码图片文件!', QMessageBox.Ok, QMessageBox.Ok)
         return
@@ -105,6 +110,36 @@ def startScan(mw, ui):
         ui.failScan.setText(str(failCount))
 
 
+def doSave(mw, ui):
+    """另存为modifiedBarcode文件下, 重命名为条形码值"""
+    if len(fileSet) == 0:
+        QMessageBox.information(mw, '提示', '你没有选择任何条形码图片文件!', QMessageBox.Ok, QMessageBox.Ok)
+        return
+    if(not os.path.exists("../modifiedBarcode")):
+        os.makedirs("../modifiedBarcode")
+    # 判断目录是否存在
+
+    cmd = ".\\ZBar\\bin\\zbarimg.exe " # 命令
+    for file in fileSet:
+        array = execCmd(cmd + file)
+        if len(array) == 0:
+            # 扫描失败
+            print("扫描失败")
+        else:
+            # 在当前目录下复制文件
+            pattern = re.compile(r'.*[/\\](.+)\.(.+)$') # 正则表达式获取文件类型
+            matcher = pattern.match(file)
+            if (matcher):
+                print(matcher.group(2))
+            else:
+                print("匹配不成功")
+            result = array[0].split(":")
+            codebarType = result[0]
+            codebarValue = result[1].strip()
+            copyfile(file, "../modifiedBarcode/" + codebarValue + "(" + codebarType + ")." + matcher.group(2))
+            ui.prompt.setText("图片已保存至当前目录下的modifiedBarcode中")
+
+
 def exitEvent(mw):
     """退出事件"""
     reply = QMessageBox.information(mw, '提示', '您确定要退出吗?', QMessageBox.Ok | QMessageBox.Cancel, QMessageBox.Cancel)
@@ -157,7 +192,7 @@ def exportEvent(mw, ui):
         worksheet.write(row, 4, label=file)
         row += 1
     # 保存
-    workbook.save('.\\data.xls')
+    workbook.save('..\\data.xls')
     ui.prompt.setText("文件已保存至当前目录下的data.xls当中")
 
 
@@ -190,6 +225,7 @@ if __name__ == "__main__":
 
     # 按钮
     ui.scanBtn.clicked.connect(lambda: startScan(mw, ui))  # 扫描按钮
+    ui.saveBtn.clicked.connect(lambda: doSave(mw, ui))  # 另存为按钮
     ui.importBtn.clicked.connect(lambda: importEvent(mw, ui))  # 导入按钮
     ui.exitBtn.clicked.connect(lambda: exitEvent(mw))  # 退出按钮
     ui.exportBtn.clicked.connect(lambda: exportEvent(mw, ui))  # 导出按钮

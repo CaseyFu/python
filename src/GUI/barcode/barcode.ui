@@ -29,9 +29,9 @@
    <widget class="QPushButton" name="scanBtn">
     <property name="geometry">
      <rect>
-      <x>1120</x>
+      <x>870</x>
       <y>340</y>
-      <width>97</width>
+      <width>141</width>
       <height>29</height>
      </rect>
     </property>
@@ -42,7 +42,7 @@ font-family:黑体;
 </string>
     </property>
     <property name="text">
-     <string>开始扫描</string>
+     <string>扫描</string>
     </property>
    </widget>
    <widget class="QPushButton" name="exitBtn">
@@ -66,7 +66,7 @@ font-family:黑体;</string>
    <widget class="QPushButton" name="exportBtn">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>270</x>
       <y>20</y>
       <width>97</width>
       <height>29</height>
@@ -85,7 +85,7 @@ font-family:黑体;
    <widget class="QPushButton" name="importBtn">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>70</x>
       <y>20</y>
       <width>97</width>
       <height>29</height>
@@ -104,7 +104,7 @@ font-family:黑体;
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>190</x>
+      <x>20</x>
       <y>320</y>
       <width>70</width>
       <height>20</height>
@@ -240,7 +240,7 @@ font-size:20px;</string>
    <widget class="QLabel" name="totalFile">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>100</x>
       <y>320</y>
       <width>41</width>
       <height>20</height>
@@ -293,9 +293,9 @@ color:red;</string>
    <widget class="QLabel" name="prompt">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>330</y>
-      <width>555</width>
+      <x>150</x>
+      <y>340</y>
+      <width>651</width>
       <height>30</height>
      </rect>
     </property>
@@ -311,7 +311,7 @@ color:#41B883;</string>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>380</x>
       <y>30</y>
       <width>360</width>
       <height>20</height>
@@ -325,8 +325,94 @@ font-size:20px;</string>
      <string>(导出前确保data.xls目前处于关闭状态)</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="saveBtn">
+    <property name="geometry">
+     <rect>
+      <x>1100</x>
+      <y>340</y>
+      <width>141</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:#41B883;
+color:white;
+font-family:黑体;
+</string>
+    </property>
+    <property name="text">
+     <string>另存为</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/import.png&quot; width=&quot;30&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>20</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/export.png&quot; width=&quot;30&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>340</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/scan.png&quot; width=&quot;30&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>340</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/save.png&quot; width=&quot;30&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>1080</x>
+      <y>670</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/exit.png&quot; width=&quot;30&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

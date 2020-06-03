@@ -6,7 +6,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-
+import resource
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -14,6 +14,9 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1090, 615)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/favicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.importBtn = QtWidgets.QPushButton(self.centralwidget)
