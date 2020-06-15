@@ -33,7 +33,6 @@ def b():
     d["c"] = 100
     print(d.get("d", -1))
 
-
 def c():
     # set
     s0 = set()  # 空集合
@@ -353,16 +352,26 @@ def ab():
     fileName = "\\11.xfk\\xfk.min.txt"
     pattern = re.compile(r'.*[/\\](.+)\.(.+)$')
     matcher = pattern.match(fileName)
-    if(matcher):
-        print(matcher.group(2))
+    if (matcher):
+        print("文件名:"+matcher.group(1)+"   文件类型:"+matcher.group(2))
     else:
         print("匹配不成功")
 
 
 def ac():
+    """如果目录不存在就创建目录"""
     path = "./xfkc"  # 如果目录不存在就返回False
     if(not os.path.exists(path)):
         os.makedirs(path)
 
+
+def ad():
+    """os获取文件名、文件类型"""
+    fileName = "F:\\repository\\python\\src\\test.txt"
+    newname = "hhh"+os.path.splitext(fileName)[1]
+    os.rename(fileName, newname)
+    print(os.path.splitext(fileName)[1])
+
+
 if __name__ == "__main__":
-    ac()
+    ad()

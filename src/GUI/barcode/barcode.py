@@ -15,45 +15,46 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1268, 711)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/favicon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/favicon.png"),
+                       QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setWindowOpacity(0.96)
         MainWindow.setStyleSheet("background:white;\n"
-"\n"
-"")
+                                 "\n"
+                                 "")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.scanBtn = QtWidgets.QPushButton(self.centralwidget)
         self.scanBtn.setGeometry(QtCore.QRect(870, 340, 141, 29))
         self.scanBtn.setStyleSheet("background:#41B883;\n"
-"color:white;\n"
-"font-family:黑体;\n"
-"")
+                                   "color:white;\n"
+                                   "font-family:黑体;\n"
+                                   "")
         self.scanBtn.setObjectName("scanBtn")
         self.exitBtn = QtWidgets.QPushButton(self.centralwidget)
         self.exitBtn.setGeometry(QtCore.QRect(1120, 670, 97, 29))
         self.exitBtn.setStyleSheet("background:#F76260;\n"
-"color:white;\n"
-"font-family:黑体;")
+                                   "color:white;\n"
+                                   "font-family:黑体;")
         self.exitBtn.setObjectName("exitBtn")
         self.exportBtn = QtWidgets.QPushButton(self.centralwidget)
         self.exportBtn.setGeometry(QtCore.QRect(270, 20, 97, 29))
         self.exportBtn.setStyleSheet("background:#41B883;\n"
-"color:white;\n"
-"font-family:黑体;\n"
-"")
+                                     "color:white;\n"
+                                     "font-family:黑体;\n"
+                                     "")
         self.exportBtn.setObjectName("exportBtn")
         self.importBtn = QtWidgets.QPushButton(self.centralwidget)
         self.importBtn.setGeometry(QtCore.QRect(70, 20, 97, 29))
         self.importBtn.setStyleSheet("background:#41B883;\n"
-"color:white;\n"
-"font-family:黑体;\n"
-"")
+                                     "color:white;\n"
+                                     "font-family:黑体;\n"
+                                     "")
         self.importBtn.setObjectName("importBtn")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(20, 320, 70, 20))
         self.label.setStyleSheet("font-family:黑体;\n"
-"font-size:20px;")
+                                 "font-size:20px;")
         self.label.setObjectName("label")
         self.fileList = QtWidgets.QTableWidget(self.centralwidget)
         self.fileList.setGeometry(QtCore.QRect(20, 60, 1231, 251))
@@ -74,17 +75,17 @@ class Ui_MainWindow(object):
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(20, 360, 50, 20))
         self.label_2.setStyleSheet("font-family:黑体;\n"
-"font-size:20px;")
+                                   "font-size:20px;")
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
         self.label_3.setGeometry(QtCore.QRect(120, 670, 90, 20))
         self.label_3.setStyleSheet("font-family:黑体;\n"
-"font-size:20px;")
+                                   "font-size:20px;")
         self.label_3.setObjectName("label_3")
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(290, 670, 90, 20))
         self.label_4.setStyleSheet("font-family:黑体;\n"
-"font-size:20px;")
+                                   "font-size:20px;")
         self.label_4.setObjectName("label_4")
         self.resultList = QtWidgets.QTableWidget(self.centralwidget)
         self.resultList.setGeometry(QtCore.QRect(15, 391, 1231, 261))
@@ -102,38 +103,38 @@ class Ui_MainWindow(object):
         self.totalFile = QtWidgets.QLabel(self.centralwidget)
         self.totalFile.setGeometry(QtCore.QRect(100, 320, 41, 20))
         self.totalFile.setStyleSheet("font-family:黑体;\n"
-"font-size:20px;")
+                                     "font-size:20px;")
         self.totalFile.setObjectName("totalFile")
         self.successScan = QtWidgets.QLabel(self.centralwidget)
         self.successScan.setGeometry(QtCore.QRect(210, 670, 41, 20))
         self.successScan.setStyleSheet("font-family:黑体;\n"
-"font-size:20px;\n"
-"color:green;")
+                                       "font-size:20px;\n"
+                                       "color:green;")
         self.successScan.setObjectName("successScan")
         self.failScan = QtWidgets.QLabel(self.centralwidget)
         self.failScan.setGeometry(QtCore.QRect(380, 670, 41, 20))
         self.failScan.setStyleSheet("font-family:黑体;\n"
-"font-size:20px;\n"
-"color:red;")
+                                    "font-size:20px;\n"
+                                    "color:red;")
         self.failScan.setObjectName("failScan")
         self.prompt = QtWidgets.QLabel(self.centralwidget)
         self.prompt.setGeometry(QtCore.QRect(150, 340, 651, 30))
         self.prompt.setStyleSheet("font-family:黑体;\n"
-"font-size:30px;\n"
-"color:#41B883;")
+                                  "font-size:30px;\n"
+                                  "color:#41B883;")
         self.prompt.setText("")
         self.prompt.setObjectName("prompt")
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
         self.label_5.setGeometry(QtCore.QRect(380, 30, 360, 20))
         self.label_5.setStyleSheet("font-family:黑体;\n"
-"font-size:20px;")
+                                   "font-size:20px;")
         self.label_5.setObjectName("label_5")
         self.saveBtn = QtWidgets.QPushButton(self.centralwidget)
         self.saveBtn.setGeometry(QtCore.QRect(1100, 340, 141, 29))
         self.saveBtn.setStyleSheet("background:#41B883;\n"
-"color:white;\n"
-"font-family:黑体;\n"
-"")
+                                   "color:white;\n"
+                                   "font-family:黑体;\n"
+                                   "")
         self.saveBtn.setObjectName("saveBtn")
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
         self.label_6.setGeometry(QtCore.QRect(30, 20, 30, 30))
@@ -187,11 +188,16 @@ class Ui_MainWindow(object):
         self.totalFile.setText(_translate("MainWindow", "0"))
         self.successScan.setText(_translate("MainWindow", "0"))
         self.failScan.setText(_translate("MainWindow", "0"))
-        self.label_5.setText(_translate("MainWindow", "(导出前确保data.xls目前处于关闭状态)"))
+        self.label_5.setText(_translate(
+            "MainWindow", "(导出前确保data.xls目前处于关闭状态)"))
         self.saveBtn.setText(_translate("MainWindow", "另存为"))
-        self.label_6.setText(_translate("MainWindow", "<html><head/><body><p><img src=\":/import.png\" width=\"30\"/></p></body></html>"))
-        self.label_7.setText(_translate("MainWindow", "<html><head/><body><p><img src=\":/export.png\" width=\"30\"/></p></body></html>"))
-        self.label_8.setText(_translate("MainWindow", "<html><head/><body><p><img src=\":/scan.png\" width=\"30\"/></p></body></html>"))
-        self.label_9.setText(_translate("MainWindow", "<html><head/><body><p><img src=\":/save.png\" width=\"30\"/></p></body></html>"))
-        self.label_10.setText(_translate("MainWindow", "<html><head/><body><p><img src=\":/exit.png\" width=\"30\"/></p></body></html>"))
-
+        self.label_6.setText(_translate(
+            "MainWindow", "<html><head/><body><p><img src=\":/import.png\" width=\"30\"/></p></body></html>"))
+        self.label_7.setText(_translate(
+            "MainWindow", "<html><head/><body><p><img src=\":/export.png\" width=\"30\"/></p></body></html>"))
+        self.label_8.setText(_translate(
+            "MainWindow", "<html><head/><body><p><img src=\":/scan.png\" width=\"30\"/></p></body></html>"))
+        self.label_9.setText(_translate(
+            "MainWindow", "<html><head/><body><p><img src=\":/save.png\" width=\"30\"/></p></body></html>"))
+        self.label_10.setText(_translate(
+            "MainWindow", "<html><head/><body><p><img src=\":/exit.png\" width=\"30\"/></p></body></html>"))

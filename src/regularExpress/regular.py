@@ -17,5 +17,17 @@ python规则:
 # re.I不区分大小写, re.M多行匹配
 # re.sub()替换
 # .groups() .group() .start() .end() .span()
-print(re.findall(r"\d+", "r12unoob 123 goo1234gle 12345"))
+# print(re.findall(r"\d+", "r12unoob 123 goo1234gle 12345"))
 # print(re.search(r"([\w]+) ([\w]+)", "Hello World Wide Web").groups())
+s = """<p class="">
+                            导演: 陈凯歌 Kaige Chen   主演: 张国荣 Leslie Cheung / 张丰毅 Fengyi Zha...<br/>
+                            1993 / 中国大陆 中国香港 / 剧情 爱情 同性
+                        </p>"""
+s1 = """<p class="">
+                                            导演: 万籁鸣 Laiming Wan / 唐澄 Cheng Tang   主演: 邱岳峰 Yuefeng Qiu
+                                            /...<br/>
+                                            1961(中国大陆) / 1964(中国大陆) / 1978(中国大陆) /
+                                            2004(中国大陆) / 中国大陆 / 动画 奇幻
+                                        </p>"""
+data = re.search(r"<br/>\s*(.*)\s/\s*(.*)\s/\s*(.*)\s", s1)
+print(data.groups())

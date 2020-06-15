@@ -1,4 +1,8 @@
 {
-    "python.pythonPath": "D:\\Anaconda\\python.exe",
-    "code-runner.runInTerminal": false, // 在终端中运行
+    "python.pythonPath": "D:\\python3\\38_64\\python38.exe",
+    "code-runner.runInTerminal": false,
+    "beautify.ignore": "", // 在终端中运行
+    "code-runner.executorMap": {
+        "python": "python38" // 已配置多版本python, 使用python38
+    },
 }
