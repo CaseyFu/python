@@ -51,14 +51,14 @@ class Queue:
             p = p.next
         return l
 
-q = Queue()
-q.enQueue(1)
-q.enQueue(2)
-q.enQueue(3)
-q.deQueue()
-q.enQueue(4)
-q.enQueue(5)
-l = q.printQueue()
-print(q.size())
-print(q.isEmpty())
+# q = Queue()
+# q.enQueue(1)
+# q.enQueue(2)
+# q.enQueue(3)
+# q.deQueue()
+# q.enQueue(4)
+# q.enQueue(5)
+# l = q.printQueue()
+# print(q.size())
+# print(q.isEmpty())
 

@@ -10,7 +10,7 @@ import arithmetic.fibonacci as FIB
 # 导入一个模块的部分函数
 from arithmetic.fibonacci import fibA
 # 导入其它包的类
-from xfk.myIterator import TestClass
+# from xfk.myIterator import TestClass
 import exception.error as error
 
 # python练习手册
@@ -32,6 +32,7 @@ def b():
     d = {"a": 33, "b": 56, "c": 99}
     d["c"] = 100
     print(d.get("d", -1))
+
 
 def c():
     # set
@@ -373,5 +374,19 @@ def ad():
     print(os.path.splitext(fileName)[1])
 
 
+class T:
+    num = 1
+
+    def __init__(self, num):
+        self.num = num
+
+    def __init__(self):
+        self.num = 0
+
+    def pT(self):
+        print(self.num)
+
+
 if __name__ == "__main__":
-    ad()
+    t = T()
+    t.pt()
